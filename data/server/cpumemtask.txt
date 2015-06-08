@@ -1,0 +1,150 @@
+# CPU and Memory stat feed
+Please configure three crons in each server, which will deliver CPU and mem
+statistics to a central location for reporting.
+
+## Crons
+Here are the cron entries to create, which run two shell scripts given below.
+You can choose whatever path you want to place the scripts. 
+
+	00,10,20,30,40,50 * * * * /home/cpustat.sh >> /home/cpustat.log
+	00,10,20,30,40,50 * * * * /home/memstat.sh >> /home/memstat.log
+	00,10,20,30,40,50 * * * * /home/iostat.sh >> /home/iostat.log
+	00,10,20,30,40,50 * * * * /home/procstat.sh >> /home/procstat.log
+
+## cpustat.sh
+
+### Linux
+
+    FILENAME=`hostname`_cpu.txt
+	sar -u 1 1 | tail -2 | head -n1 | awk '{print substr($1,0,5)"|"$3"|"$5"|"$6}' >> $FILENAME
+    tail -10 $FILENAME > $FILENAME.log
+    mv $FILENAME.log $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+### Solaris
+
+    FILENAME=`hostname`_cpu.txt
+    sar -u 1 1 | tail -1 | awk '{print substr($1,0,5)"|"$2"|"$3"|"$4}' >> $FILENAME
+    tail -10 $FILENAME > $FILENAME.log
+    mv $FILENAME.log $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+## memstat.sh
+### Linux
+
+    FILENAME=`hostname`_mem.txt
+    sar -r | sed -re 's/[ ]+/\t/g' | tail -11 | awk '{print substr($1,0,5)"|"$4"|"$9}' |  sed -re 's/\t/|/g' | head > $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+
+### Solaris
+
+    #!/usr/bin/ksh
+    # Solaris 8 compatible free memory script. It writes the current timestamp
+    # and free memory
+    memory=`/usr/sbin/prtconf | grep Memory | head -1 | /usr/bin/awk 'BEGIN {FS=" "} {print $3}'`
+    gb_memory=`echo "scale=2; $memory/1024" | bc -l`
+    
+    # Free memory
+    pagesize=`pagesize`
+    kb_pagesize=`echo "scale=2; $pagesize/1024" | bc -l`
+    sar_freemem=`/usr/bin/sar -r 1 1 | tail -1 | awk 'BEGIN {FS=" "} {print $2}'`
+    gb_freemem=`echo "scale=2; $kb_pagesize*$sar_freemem/1024/1024" | bc -l`
+    
+    # Used Memory
+    gb_usedmem=`echo "scale=2; $gb_memory-$gb_freemem" | bc -l`
+    
+    # Conclusion
+    #echo "Avai Mem: $gb_memory GB"
+    #echo "Free Mem: $gb_freemem GB"
+    #echo "Used Mem: $gb_usedmem GB"
+    percent_used=`echo "scale=2; $gb_usedmem*100/$gb_memory" | bc -l`
+    #echo "% used: $percent_used"
+    
+    swapinfo=`/usr/sbin/swap -s`
+    
+    swapused=`echo $swapinfo | awk '{print $9}' | sed 's/k//'`
+    swapavail=`echo $swapinfo | awk '{print $11}' | sed 's/k//'`
+    swaptotal=`echo $swapused+$swapavail | bc`
+    
+    swapusedpercent=`echo "scale=2; ($swapused/$swaptotal)*100" | bc -l`
+    
+    time=`date '+%H:%M'`
+    FILENAME=`/usr/bin/hostname`_mem.txt
+    echo "$time|$percent_used|$swapusedpercent" >> $FILENAME
+    tail -10 $FILENAME > $FILENAME.log
+    mv $FILENAME.log $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+## IOStat.sh
+###Linux
+
+    FILENAME=`hostname`_io.txt
+    iostat -xm | sort -nrk12 | head -n1 | awk '{print $12"|"$6"|"$7"|"$10}' >> $FILENAME
+    
+    tail -10 $FILENAME > $FILENAME.log
+    mv $FILENAME.log $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+###Solaris
+
+    FILENAME=`hostname`_io.txt
+    iostat -zxnM | sort -nrk10 | head -n1 | awk '{print $10"|"$3"|"$4"|"$5"|"}' >> $FILENAME
+    
+    tail -10 $FILENAME > $FILENAME.log
+    mv $FILENAME.log $FILENAME
+    
+    ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+        user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+        put $FILENAME
+        bye
+        End-of-Session
+    EOF
+
+##Procstat.sh
+
+	FILENAME=`hostname`_proc.txt
+
+	time=`date '+%H:%M'`
+	count=`ps -e | wc -l`
+	echo "$time|$count" >> $FILENAME
+	tail -10 $FILENAME > $FILENAME.log
+	mv $FILENAME.log $FILENAME
+
+	ftp -n -i bcpdash.nat.bt.com <<End-of-Session
+		user bcpdash.nat.bt.com|transactiondata "Transaction2014"
+		put $FILENAME
+		bye
+		End-of-Session
+	EOF
+

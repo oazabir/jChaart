@@ -1,0 +1,50 @@
+07:00|Total Ordered          |                   1|black
+07:00|Failed Last week       |                   0|red
+07:00|Failed                 |                   0|brown
+07:00|Total Ordered Last Week|                   1|gray
+08:00|Failed                 |                  30|brown
+08:00|Failed Last week       |                  45|red
+08:00|Total Ordered          |                 124|black
+08:00|Total Ordered Last Week|                  89|gray
+09:00|Total Ordered          |                 205|black
+09:00|Failed Last week       |                 108|red
+09:00|Failed                 |                  41|brown
+09:00|Total Ordered Last Week|                 248|gray
+10:00|Failed                 |                  68|brown
+10:00|Failed Last week       |                 179|red
+10:00|Total Ordered          |                 319|black
+10:00|Total Ordered Last Week|                 435|gray
+11:00|Failed                 |                  64|brown
+11:00|Failed Last week       |                 170|red
+11:00|Total Ordered Last Week|                 375|gray
+11:00|Total Ordered          |                 368|black
+12:00|Failed                 |                  32|brown
+12:00|Total Ordered          |                 297|black
+12:00|Failed Last week       |                 145|red
+12:00|Total Ordered Last Week|                 346|gray
+13:00|Failed                 |                  31|brown
+13:00|Total Ordered Last Week|                 316|gray
+13:00|Total Ordered          |                 252|black
+13:00|Failed Last week       |                 118|red
+14:00|Failed                 |                   9|brown
+14:00|Failed Last week       |                 129|red
+14:00|Total Ordered          |                 137|black
+14:00|Total Ordered Last Week|                 369|gray
+15:00|Failed Last week       |                 104|red
+15:00|Total Ordered Last Week|                 301|gray
+16:00|Failed Last week       |                 133|red
+16:00|Total Ordered Last Week|                 321|gray
+17:00|Failed Last week       |                  90|red
+17:00|Total Ordered Last Week|                 240|gray
+18:00|Failed Last week       |                  10|red
+18:00|Total Ordered Last Week|                  28|gray
+19:00|Failed Last week       |                   0|red
+19:00|Total Ordered Last Week|                   3|gray
+20:00|Failed Last week       |                   0|red
+20:00|Total Ordered Last Week|                   3|gray
+21:00|Failed Last week       |                   3|red
+21:00|Total Ordered Last Week|                  13|gray
+22:00|Total Ordered Last Week|                  10|gray
+22:00|Failed Last week       |                   1|red
+23:00|Failed Last week       |                   0|red
+23:00|Total Ordered Last Week|                   1|gray

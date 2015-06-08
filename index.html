@@ -1,0 +1,254 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Dashboard</title>
+    <!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+	<link href="css/jChaart.css" rel="stylesheet" />
+	
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/underscore.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="js/date.js"></script>
+    <!--[if lte IE 8]>
+        <script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script>
+    <![endif]-->
+    <script src="js/jquery.flot.js"></script>
+    <script src="js/jquery.flot.pie.js"></script>
+    <script src="js/jquery.flot.categories.js"></script>
+
+    <script src="js/jChaart.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Performance Dashboard</a></li>
+                   <li><a href="//github.com/oazabir/jChaart">Get the code</a></li>                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+       <h2>Online Order System</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Hourly Order Stats</div>
+                    <div class="panel-body panel-body-height">
+                        <div class="chart-container">
+                            <div id="OnlineOrderWeekComparison" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Orders Source</div>
+                    <div class="panel-body panel-body-height">
+                        <div class="chart-container">
+                            <div id="OnlineOrderSourceCount" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Order Channel</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="OnlineOrderHourlyCount" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Totals today</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="OnlineOrderStatusCountHistory" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Error code today</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="OnlineOrderErrorCode" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>Agent System</h2>
+        <div class="row">
+            <div class="col-md-8">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Hourly Order Stats</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="AgentOrderHourlyCount" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Totals today</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="AgentOrderStat" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+		
+		<h2>Server Health</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">CPU</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="CPUGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Memory</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="MemoryGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Swap</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="SwapGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Disk Busy</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="DiskBusyGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Disk Read MB/s</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="DiskRMBGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Disk Write MB/s</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="DiskWMBGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Disk Wait</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="DiskWaitGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="panel panel-success">
+                    <div class="panel-heading">Process Count</div>
+                    <div class="panel-body panel-body-height" id="WhoIsActive">
+                        <div class="chart-container">
+                            <div id="ProcessCountGraph" class="chart-placeholder"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+</body>
+<script type="text/javascript">
+	
+    $(document).ready(function () {
+        lastweekColor = function (set) {
+                if (set.label.indexOf("Last") >= 0)
+                    set.lines = { show: true, fill: true, lineWidth: 0, opacity: 0.5 };
+        }
+        // Online Order
+        jChaart.build({ id: '#OnlineOrderSourceCount', urls: "data/transactions/OnlineOrders.txt", style: jChaart.GraphStyles.pieChart });
+        jChaart.build({ id: '#OnlineOrderWeekComparison', urls: "data/transactions/Online_week_comparison.txt", onNewDataset: lastweekColor});
+        
+        jChaart.build({ id: '#OnlineOrderHourlyCount', urls: "data/transactions/OnlineHourlyOrderCount.txt" , onNewDataset: lastweekColor });
+        jChaart.build({ id: '#OnlineOrderStatusCountHistory', urls: "data/transactions/OnlineStatusCount.txt", style: jChaart.GraphStyles.barChart });
+        jChaart.build({ id: '#OnlineOrderErrorCode', urls: "data/transactions/OnlineErrorCount.txt", style: jChaart.GraphStyles.barChart });
+
+        // Agent
+        jChaart.build({ id: '#AgentOrderHourlyCount', urls: "data/transactions/Agent_orders.txt", onNewDataset: lastweekColor });
+        jChaart.build({ id: '#AgentOrderStat', urls: "data/transactions/Agent_stats.txt", style: jChaart.GraphStyles.pieChart });
+
+		
+		// system stats
+        jChaart.build({ id:'#CPUGraph', urls:["data/server/omar-ubuntu_cpu.txt"], seriesNames: ['Ubuntu'], valueIndex:1, color: 'black', style:jChaart.GraphStyles.lineChart_filled });
+		jChaart.build({ id:'#MemoryGraph', urls:["data/server/omar-ubuntu_mem.txt"], seriesNames: ['Ubuntu'], valueIndex:1, color: 'green', style:jChaart.GraphStyles.lineChart_filled });
+		jChaart.build({ id:'#SwapGraph', urls:["data/server/omar-ubuntu_mem.txt"], seriesNames: ['Ubuntu'], valueIndex:2, color: 'blue',  style:jChaart.GraphStyles.lineChart_filled  });
+		jChaart.build({ id:'#DiskBusyGraph', urls:["data/server/omar-ubuntu_io.txt"], seriesNames: ['Ubuntu'], valueIndex:1, color: 'red',  style:jChaart.GraphStyles.lineChart_filled  });
+		jChaart.build({ id:'#DiskRMBGraph', urls:["data/server/omar-ubuntu_io.txt"], seriesNames: ['Ubuntu'], valueIndex:2, color: 'lightgreen',  style:jChaart.GraphStyles.lineChart_filled  });
+		jChaart.build({ id:'#DiskWMBGraph', urls:["data/server/omar-ubuntu_io.txt"], seriesNames: ['Ubuntu'], valueIndex:3, color: 'lightblue',  style:jChaart.GraphStyles.lineChart_filled  });
+		jChaart.build({ id:'#DiskWaitGraph', urls:["data/server/omar-ubuntu_io.txt"], seriesNames: ['Ubuntu'], valueIndex:4, color: 'brown',  style:jChaart.GraphStyles.lineChart_filled  });
+		jChaart.build({ id:'#ProcessCountGraph', urls:["data/server/omar-ubuntu_proc.txt"], seriesNames: ['Ubuntu'], valueIndex:1, color: 'black',  style:jChaart.GraphStyles.lineChart_filled  });
+
+    });
+
+</script>
+</html>
+

@@ -1,0 +1,69 @@
+00:00|Total|597|black
+01:00|Total|2778|black
+02:00|Total|1953|black
+03:00|Total|2744|black
+04:00|Total|2434|black
+05:00|Total|914|black
+06:00|Total|409|black
+07:00|Total|1535|black
+08:00|Total|930|black
+09:00|Total|1037|black
+10:00|Total|1504|black
+11:00|Total|1928|black
+12:00|Total|2740|black
+13:00|Total|3025|black
+14:00|Total|1497|black
+00:00|Total Last Week|361|gray
+01:00|Total Last Week|3354|gray
+02:00|Total Last Week|1860|gray
+03:00|Total Last Week|1115|gray
+04:00|Total Last Week|758|gray
+05:00|Total Last Week|298|gray
+06:00|Total Last Week|285|gray
+07:00|Total Last Week|516|gray
+08:00|Total Last Week|954|gray
+09:00|Total Last Week|1887|gray
+10:00|Total Last Week|2107|gray
+11:00|Total Last Week|3007|gray
+12:00|Total Last Week|2207|gray
+13:00|Total Last Week|2299|gray
+14:00|Total Last Week|2202|gray
+15:00|Total Last Week|2608|gray
+16:00|Total Last Week|2187|gray
+17:00|Total Last Week|2090|gray
+18:00|Total Last Week|1925|gray
+19:00|Total Last Week|1504|gray
+20:00|Total Last Week|1242|gray
+21:00|Total Last Week|941|gray
+22:00|Total Last Week|575|gray
+23:00|Total Last Week|244|gray
+00:00|Customer|3|green
+01:00|Customer|149|green
+02:00|Customer|106|green
+03:00|Customer|687|green
+04:00|Customer|5|green
+05:00|Customer|3|green
+06:00|Customer|5|green
+07:00|Customer|26|green
+08:00|Customer|99|green
+09:00|Customer|225|green
+10:00|Customer|342|green
+11:00|Customer|310|green
+12:00|Customer|288|green
+13:00|Customer|275|green
+14:00|Customer|101|green
+00:00|Affiliates|594|blue
+01:00|Affiliates|2629|blue
+02:00|Affiliates|1847|blue
+03:00|Affiliates|2057|blue
+04:00|Affiliates|2429|blue
+05:00|Affiliates|911|blue
+06:00|Affiliates|404|blue
+07:00|Affiliates|1509|blue
+08:00|Affiliates|831|blue
+09:00|Affiliates|812|blue
+10:00|Affiliates|1162|blue
+11:00|Affiliates|1618|blue
+12:00|Affiliates|2452|blue
+13:00|Affiliates|2750|blue
+14:00|Affiliates|1396|blue

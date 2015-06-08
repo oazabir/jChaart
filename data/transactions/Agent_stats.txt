@@ -1,0 +1,12 @@
+14:06|Automated  |                 677|green
+14:06|Backoffice |                  37|yellow
+14:06|Failed     |                 275|red
+14:06|Frontoffice|                   1|black
+14:06|Frontoffice|                 105|black
+14:06|Frontoffice|                 111|black
+14:06|Frontoffice|                 175|black
+14:06|Frontoffice|                 220|black
+14:06|Frontoffice|                 251|black
+14:06|Frontoffice|                 276|black
+14:06|Frontoffice|                 308|black
+14:06|Wait       |                  14|gray

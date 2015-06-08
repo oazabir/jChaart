@@ -1,0 +1,102 @@
+00:00|Completed|582|black
+00:00|Last week Completed|357|grey
+00:00|Last week Error|1|red
+00:00|New|10|yellow
+01:00|New|22|yellow
+01:00|Last week Error|19|red
+01:00|Last week New|8|ivory
+01:00|Last week Completed|3322|grey
+01:00|Completed|2742|black
+01:00|Error|9|brown
+02:00|Error|23|brown
+02:00|Completed|1906|black
+02:00|Last week Completed|1845|grey
+02:00|Last week New|2|ivory
+02:00|Last week Error|13|red
+02:00|New|23|yellow
+03:00|New|3|yellow
+03:00|Last week Error|39|red
+03:00|Last week New|1|ivory
+03:00|Last week Completed|1075|grey
+03:00|Completed|2693|black
+03:00|Error|42|brown
+04:00|Error|26|brown
+04:00|Completed|2399|black
+04:00|Last week Completed|739|grey
+04:00|Last week Error|18|red
+04:00|New|4|yellow
+05:00|New|4|yellow
+05:00|Last week Completed|298|grey
+05:00|Completed|908|black
+05:00|Error|1|brown
+06:00|Completed|406|black
+06:00|Last week Completed|282|grey
+06:00|Last week Error|2|red
+06:00|New|2|yellow
+07:00|New|8|yellow
+07:00|Last week Completed|515|grey
+07:00|Completed|1514|black
+07:00|Error|1|brown
+08:00|Error|3|brown
+08:00|Completed|909|black
+08:00|Last week Completed|946|grey
+08:00|Last week Error|3|red
+08:00|Last week New|2|ivory
+08:00|New|14|yellow
+09:00|New|13|yellow
+09:00|Last week New|14|ivory
+09:00|Last week Error|3|red
+09:00|Last week Completed|1861|grey
+09:00|Completed|1012|black
+09:00|Error|7|brown
+10:00|Error|7|brown
+10:00|Completed|1457|black
+10:00|Last week Completed|2061|grey
+10:00|Last week Error|10|red
+10:00|Last week New|20|ivory
+10:00|New|33|yellow
+11:00|New|24|yellow
+11:00|Last week New|19|ivory
+11:00|Last week Error|5|red
+11:00|Last week Completed|2962|grey
+11:00|Completed|1884|black
+11:00|Error|8|brown
+12:00|Error|3|brown
+12:00|Completed|2452|black
+12:00|Last week Completed|2175|grey
+12:00|Last week Error|7|red
+12:00|Last week New|14|ivory
+12:00|New|256|yellow
+13:00|New|643|yellow
+13:00|Last week New|15|ivory
+13:00|Last week Completed|2275|grey
+13:00|Completed|2357|black
+13:00|Error|2|brown
+14:00|Error|4|brown
+14:00|Completed|1349|black
+14:00|Last week Completed|2179|grey
+14:00|Last week New|13|ivory
+14:00|Last week Error|1|red
+14:00|New|540|yellow
+15:00|Last week Error|4|red
+15:00|Last week New|15|ivory
+15:00|Last week Completed|2572|grey
+16:00|Last week Completed|2160|grey
+16:00|Last week New|15|ivory
+16:00|Last week Error|4|red
+17:00|Last week Error|2|red
+17:00|Last week New|13|ivory
+17:00|Last week Completed|2071|grey
+18:00|Last week Completed|1905|grey
+18:00|Last week New|10|ivory
+19:00|Last week New|5|ivory
+19:00|Last week Completed|1490|grey
+20:00|Last week Completed|1219|grey
+20:00|Last week New|2|ivory
+20:00|Last week Error|11|red
+21:00|Last week Error|2|red
+21:00|Last week New|1|ivory
+21:00|Last week Completed|934|grey
+22:00|Last week Completed|568|grey
+22:00|Last week New|1|ivory
+23:00|Last week Completed|239|grey
